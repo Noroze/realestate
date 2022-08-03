@@ -3,10 +3,7 @@ import Head from 'next/head';
 import NProgress from 'nprogress';
 import { ChakraProvider } from '@chakra-ui/react';
 import Layout from '../components/Layout';
-import { useEffect } from 'react'
-import Script from 'next/script'
-import { useRouter } from 'next/router'
-import * as gtag from '../lib/gtag'
+
 
 function MyApp({ Component, pageProps }) {
   
@@ -22,6 +19,20 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
       <Head>
+      <script
+      strategy="lazyOnload"
+      src={'https://www.googletagmanager.com/gtag/js?id=G-PL2KSRFC4L'} 
+    />
+    <script strategy="lazyOnload">
+        {
+        `
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-PL2KSRFC4L');
+    `
+    }
+      </script>
         <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/nprogress/0.2.0/nprogress.min.css' integrity='sha512-42kB9yDlYiCEfx2xVwq0q7hT4uf26FUgSIZBK8uiaEnTdShXjwr8Ip1V4xGJMg3mHkUt9nNuTDxunHF0/EgxLQ==' crossOrigin='anonymous' referrerPolicy='no-referrer' />
       </Head>
       <ChakraProvider>
@@ -31,8 +42,8 @@ function MyApp({ Component, pageProps }) {
       </ChakraProvider>
     </>
   );
-  
 }
 
 export default MyApp;
+  
 
