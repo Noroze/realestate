@@ -19,6 +19,7 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
       <Head>
+      <meta name="google-site-verification" content="n97ETkl7QMpWdHF50ziilhQzBYlvNM3MBhbT1gEGTcE" />
       <script
       strategy="lazyOnload"
       src={'https://www.googletagmanager.com/gtag/js?id=G-PL2KSRFC4L'} 
