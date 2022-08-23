@@ -21,11 +21,11 @@ export const Banner = ({ purpose, title1, title2, desc1, desc2, buttonText, link
 
 
 const Home = ({ propertiesForSale, propertiesForRent }) => (
-  <Box>
-    <Banner
+  <Box color='red.600'>
+    <Banner 
       purpose='RENT A HOME'
-      title1='Rental Homes for'
-      title2='Everyone'
+      title1='Rental Homes in'
+      title2='United Arab Emirates'
       desc1=' Explore from Apartments, builder floors, villas'
       desc2='and more'
       buttonText='Explore Renting'

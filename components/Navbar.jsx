@@ -1,35 +1,33 @@
 import Link from 'next/link';
-import { Menu, MenuButton, MenuList, MenuItem, IconButton, Flex, Box, Spacer } from '@chakra-ui/react';
+import { Menu, MenuButton, MenuList, MenuItem, IconButton, Flex, Box, Spacer, GridItem } from '@chakra-ui/react';
 import { FcMenu, FcHome, FcAbout } from 'react-icons/fc';
 import { BsSearch } from 'react-icons/bs';
 import { FiKey } from 'react-icons/fi';
 
+
 const Navbar = () => (
   <Flex p='2' borderBottom='1px' borderColor='gray.100'>
-    <Box fontSize='3xl' color='blue.400' fontWeight='bold'>
-      <Link href='/' paddingLeft='2'>Starvo</Link>
+    <Box fontSize='3xl' color='red.600' fontWeight='bold'>
+      <Link href='/' paddingLeft='2'>Hoff-Lu</Link>
     </Box>
     <Spacer />
-    <Box>
-      <Menu>
-        <MenuButton as={IconButton} icon={<FcMenu />} variant='outline' color='red.400' />
-        <MenuList>
-          <Link href='/' passHref>
-            <MenuItem icon={<FcHome />}>Home</MenuItem>
+    
+    <Menu>
+  <Box textAlign='center' fontSize={20} color='black.600' borderTop='1px' borderColor='gray.100'>
+    
+    <div >
+    <Link href='/' passHref>
+            Home&nbsp;&nbsp;&nbsp;</Link>
+          <Link href='/search' passHref>Search&nbsp;&nbsp;&nbsp;</Link>
+          <Link href='/search?purpose=for-sale' passHref>Buy Property&nbsp;&nbsp;&nbsp;
           </Link>
-          <Link href='/search' passHref>
-            <MenuItem icon={<BsSearch />}>Search</MenuItem>
+          <Link href='/search?purpose=for-rent' passHref>Rent Property&nbsp;&nbsp;&nbsp;
           </Link>
-          <Link href='/search?purpose=for-sale' passHref>
-            <MenuItem icon={<FcAbout />}>Buy Property</MenuItem>
-          </Link>
-          <Link href='/search?purpose=for-rent' passHref>
-            <MenuItem icon={<FiKey />}>Rent Property</MenuItem>
-          </Link>
-        </MenuList>
-      </Menu>
+    </div> 
     </Box>
+    </Menu>
   </Flex>
+  
 );
 
 export default Navbar;
