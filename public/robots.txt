@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://starvo.us
+Host: https://hoff-lu.com
 
 # Sitemaps
-Sitemap: https://starvo.us/sitemap.xml
+Sitemap: https://hoff-lu.com/sitemap.xml
